@@ -1,0 +1,10 @@
+{
+  "name": "language-arm",
+  "version": "0.0.0",
+  "description": "Syntax highlighting for ARM Assembly",
+  "repository": "https://github.com/atom/language-arm",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}
