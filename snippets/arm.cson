@@ -6,3 +6,15 @@
         \n;\t${3:Version - 0.0.0}
         \n;\t${4:Date}
         \n;\n;\t${5:Description - This is an ARM source file}'
+  'ADD Mnemonic':
+    'prefix': 'add'
+    'body': 'add${1:}\t${2:Op1}, ${3:Op2}, ${4:Dest}'
+  'SUB Mnemonic':
+    'prefix': 'sub'
+    'body': 'sub${1:}\t${2:Op1}, ${3:Op2}, ${4:Dest}'
+  'LDR Mnemonic':
+    'prefix': 'ldr'
+    'body': 'ldr${1:}\t${2:Dest}, ${3:Source}'
+  'STR Mnemonic':
+    'prefix': 'ldr'
+    'body': 'ldr${1:}\t${2:Source}, ${3:Dest}'

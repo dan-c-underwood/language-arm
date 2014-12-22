@@ -6,7 +6,7 @@
 strings 	defw	"Awaiting input"
 		defb    'a', 'b', 'c', 'd'
 
-branches	b	start                ;With comment!
+branches	b	start			;With comment!
                 bne     end
                 bl      linked_place
 
@@ -21,11 +21,11 @@ start	        adr	sp, stack_end
                 mov	r1, sp
                 strb	r0, [r1, #stack]
                 nop
-                stmfd	sp!, {r0-r2,lr}
+                stmfd	sp!, {r0-r2, lr}
 		movs	r2, r2, lsr #1
 		cmp	r0, r2
                 addsne	r0, r0, #&1
                 bne	start
-		ldmfd	sp!, {r0-r2,pc}^
+		ldmfd	sp!, {r0-r2, pc}^
 
 end		svc	0
