@@ -6,5 +6,11 @@
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
-  }
+  },
+  "keywords": [
+  	"grammar",
+  	"assembly",
+  	"arm",
+  	"language"
+  ],
 }
