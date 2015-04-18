@@ -5,12 +5,29 @@
 'fileTypes': [
   's'
   'S'
+  'asm'
 ]
 'patterns': [
   {
     'match': ';.*$'
     'name': 'comment.arm'
   }
+  {
+    'name': 'comment.arm'
+    'begin': '\\/\\*'
+    'beginCaptures':
+          '0':
+            'name': 'comment.begin.arm'
+    'endCaptures':
+          '0':
+            'name': 'comment.end.arm'
+    'end': '\\*\\/'
+  }
+  {
+    'match': '.*:$'
+    'name': 'routine.arm'
+  }
+
   {
     'name': 'string.quoted.arm'
     'begin': '"'
@@ -70,11 +87,11 @@
   }
   {
     'name': 'keyword.control.directive.arm'
-    'match': '\\.(?i)(globl|global|macro|endm|purgem|if|elseif|else|endif|section|text|arm|align|balign|irp|rept|endr|req|unreq|error|short|func|endfunc|hidden|type|fpu|arch|code|altmacro|object_arch|word|int|string)(?-i)\\b'
+    'match': '\\.(?i)(globl|global|macro|endm|purgem|if|elseif|else|endif|section|text|data|bss|arm|align|balign|irp|rept|endr|req|unreq|error|short|func|endfunc|hidden|type|fpu|arch|code|altmacro|object_arch|word|int|string)(?-i)\\b'
   }
   {
     'name': 'meta.preprocessor.arm'
-    'begin': '^\\s*#\\s*(define|defined|elif|else|if|ifdef|ifndef|line|pragma|undef|endif)\\b'
+    'begin': '^\\s*#\\s*(define|defined|elif|else|if|ifdef|ifndef|line|include|pragma|undef|endif)\\b'
     'captures': {
       '1': { 'name': 'keyword.control.import.arm' }
     }
