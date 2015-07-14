@@ -16,5 +16,11 @@
     'prefix': 'ldr'
     'body': 'ldr${1:}\t${2:Dest}, ${3:Source}'
   'STR Mnemonic':
-    'prefix': 'ldr'
-    'body': 'ldr${1:}\t${2:Source}, ${3:Dest}'
+    'prefix': 'str'
+    'body': 'str${1:}\t${2:Source}, ${3:Dest}'
+  'MOV Mnemonic':
+    'prefix': 'mov'
+    'body': 'mov${1:}\t${2:Source}, ${3:Dest}'
+  'CMP Mnemonic':
+    'prefix': 'cmp'
+    'body': 'cmp${1:}\t${2:Arg1}, ${3:Arg2}'
