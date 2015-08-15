@@ -1,11 +1,11 @@
 '.source.arm':
   'File documentation':
     'prefix': 'doc'
-    'body': ';\t${1:Filename}
-        \n;\t${2:Author}
-        \n;\t${3:Version - 0.0.0}
-        \n;\t${4:Date}
-        \n;\n;\t${5:Description - This is an ARM source file}'
+    'body': '@\t${1:Filename}
+        \n@\t${2:Author}
+        \n@\t${3:Version - 0.0.0}
+        \n@\t${4:Date}
+        \n@\n@\t${5:Description - This is an ARM source file}'
   'ADD Mnemonic':
     'prefix': 'add'
     'body': 'add${1:}\t${2:Op1}, ${3:Op2}, ${4:Dest}'
