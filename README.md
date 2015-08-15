@@ -11,4 +11,4 @@ To install the package language-arm:
 
 ## Screenshot
 
-![Example of Highlighting](example.png)
+![Example of Highlighting](https://raw.githubusercontent.com/dan-c-underwood/language-arm/master/example.png)
