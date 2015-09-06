@@ -6,7 +6,7 @@ Adds syntax highlighting for the ARM Assembly language to Atom. This package was
 
 To install the package language-arm:
 
-* In Atom: (Preferences->Packages)
+* In Atom: (Preferences->Install)
 * Shell: `$ apm install language-arm`
 
 ## Screenshot
