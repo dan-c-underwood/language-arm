@@ -9,7 +9,7 @@
 ]
 'patterns': [
   {
-    'match': '([;@]|//)(.*$|.*:$)'
+    'match': '([;@]|//).*$'
     'name': 'comment.arm'
   }
   {
@@ -24,10 +24,9 @@
     'end': '\\*\\/'
   }
   {
-    'match': '.*:$'
+    'match': '^\\s*\\.?\\w+:\\s*(?=$|;)'
     'name': 'routine.arm'
   }
-
   {
     'name': 'string.quoted.arm'
     'begin': '"'
