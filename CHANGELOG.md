@@ -1,3 +1,6 @@
+## 1.2.3 - Additional file extension
+* Adds support for .arm file extension
+
 ## 1.2.2 - Changelog patch
 * Actually start making use of Changelog (back to 1.0)!
 
