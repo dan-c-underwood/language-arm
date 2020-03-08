@@ -1,6 +1,6 @@
 @	test.s
 @	dan-c-underwood
-@	Version - 1.0.0
+@	Version - 1.2.0
 @	15/08/15
 @
 @	Description - Example ARM Source File
@@ -23,7 +23,7 @@ stack_end:      defs	512			@ Stack Declaration
 		/* C Style comments
 		Can be multiline */
 start:
-	adr	r6, stack_end
+		adr	r6, stack_end
 		mov	r0, #&3f
 		bic	r2, r0
 		mov	r1, sp
@@ -35,6 +35,9 @@ start:
 		addnes	r0, r0, #&1
 		bne	start
 		ldmfd	sp!, {r0-r2, pc}^
+		ldreq	x16, r1, [r2, #0x80]
+		pacdzb	x16
+		retab
 
 end:
 		svc	0
