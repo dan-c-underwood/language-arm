@@ -1,6 +1,6 @@
 @	test.s
 @	dan-c-underwood
-@	Version - 1.2.0
+@	Version - 1.3.0
 @	15/08/15
 @
 @	Description - Example ARM Source File
@@ -10,7 +10,7 @@ string_a: 	defw	"Awaiting input"
 string_b:	defb    'a', 'b', 'c', 'd'
 
 branches:
-		b	start			@ With comment!
+		b		start			@ With comment!
 		bne     end
 		bl      linked_place
 
@@ -41,3 +41,7 @@ start:
 
 end:
 		svc	0
+		b {pc}+4,
+
+.thumb
+		add r0, r1

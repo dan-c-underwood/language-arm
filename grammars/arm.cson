@@ -9,7 +9,7 @@ fileTypes: [
 ]
 patterns: [
   {
-    match: '^\\s*#(define|include|if|ifdef|else|elif|endif)(\\s(defined\\([a-zA-Z_]+\\)|[a-zA-Z_]+))?$'
+    match: '^\\s*[#\\.](define|include|(end|el|else)?if|if(def|ndef)?|else)(\\s(defined\\([a-zA-Z_]+\\)|[a-zA-Z_]+))?$'
     name: 'meta.preprocessor'
   }
   {
@@ -92,11 +92,7 @@ patterns: [
   }
   {
     name: 'keyword.control.directive.arm'
-    match: '\\.(?i)(globl|global|macro|endm|purgem|if|elseif|else|endif|section|text|data|bss|arm|align|balign|irp|rept|endr|req|unreq|error|short|func|endfunc|hidden|type|fpu|arch|code|altmacro|object_arch|word|int|string)(?-i)\\b'
-  }
-  {
-    name: 'keyword.other.preprocessor.arm'
-    match: '^\\s*\\.?(define|defined|elif|else|if|ifdef|ifndef|line|include|get|pragma|undef|endif)\\b'
+    match: '\\.(?i)(globl|global|macro|endm|purgem|section|text|data|bss|arm|align|balign|irp|rept|endr|(un)?req|error|short|(end)?func|hidden|type|fpu|arch|code|altmacro|object_arch|word|int|string|thumb|set|pragma|undef|line|get)(?-i)\\b'
   }
   {
     match: '\\b\\='
@@ -155,10 +151,10 @@ patterns: [
     include: '#registers'
   }
   {
-    include: '#numerics'
+    include: '#variables'
   }
   {
-    include: '#variables'
+    include: '#numerics'
   }
   {
     include: '#strings'
@@ -201,6 +197,10 @@ repository:
       {
         match: '#?[0-9]+\\b'
         name: 'constant.numeric.dec.arm'
+      }
+      {
+        match: '#?0b[01]+\\b'
+        name: 'constant.numeric.bin.arm'
       }
     ]
   registers:
